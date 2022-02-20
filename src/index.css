@@ -1,13 +1,146 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  width: 40rem;
+  margin: 1rem auto;
+}
+h1 {
+  text-align: center;
+}
+.add-product {
+  width: 33rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.add-product-item {
+  border: 1px solid #000;
+  padding: 0.5rem;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+.product-panel {
+  background-color: #EEE;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product {
+  display: flex;
+  gap: 2rem;
+  color: #4E5150;
+}
+.product-image {
+  width: 10rem;
+  height: 12rem;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+strong {
+  color: #F2994A;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.line-through {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+.quantity-control {
+  margin-top: 1rem;
+  width: 45%;
+  border: 1px solid black;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plus, .minus {
+  color: #000;
+  background-color: #E0E0E0;
+  width: 1.7rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.plus:hover, .minus:hover, .remove:hover {
+  cursor: pointer;
+}
+.quantity {
+  font-size: 1rem;
+}
+.remove {
+  background-color: #AA4444;
+  color: #FFF;
+  border: none;
+  width:fit-content;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+.product-total {
+  margin-top: auto;
+  font-size: 1.2rem;
+  color: #000;
+}
+.price-list {
+  width: 33rem;
+  font-size: 1.2rem;
+}
+.pricing {
+  display: flex;
+  justify-content: space-between;
+}
+hr{
+  margin-top: 0.9rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width: 650px) {
+  main {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .add-product {
+    width: 100%;
+    flex-direction: column;
+  }
+  .quantity-control {
+    width: 9rem;
+    padding: 0.5rem;
+  }
+  .price-list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .product {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .product-panel {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
 }
